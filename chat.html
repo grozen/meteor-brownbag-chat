@@ -1,13 +1,27 @@
 <head>
-  <title>chat</title>
+  <title>Le chat du fromage</title>
 </head>
 
 <body>
-  {{> hello}}
+  <h1>Le chat du fromage</h1>
+  {{> signin}}
+  {{> participants}}
+  {{> chatroom}}
 </body>
 
-<template name="hello">
-  <h1>Hello World!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
+<template name="signin">
+  <div id="signin">
+    <form class="form-inline">
+      <label>
+        Howdy stranger, what's your name? <input type="text" placeholder="Person McDude"></input>
+      </label>
+      <button type="submit" class="btn">Sign in</button>
+    </form>
+  </div>
+</template>
+
+<template name="participants">
+</template>
+
+<template name="chatroom">
 </template>
