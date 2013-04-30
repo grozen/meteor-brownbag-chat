@@ -21,7 +21,44 @@
 </template>
 
 <template name="participants">
+  {{#if show}}
+    <div id="participants">
+      <h3>Participants</h3>
+      <table class="table table-bordered">
+        {{#each signedIn}}
+          <tr>
+            <td>
+              {{name}}
+            </td>
+          </tr>
+        {{/each}}
+      </table>
+    </div>
+  {{/if}}
 </template>
 
 <template name="chatroom">
+  {{#if show}}
+    <div id="chatroom">
+      <div>
+        <table class="table table-striped">
+          <tbody>
+            {{#each messages}}
+              <tr>
+                <td>
+                  {{text}}
+                </td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+      <form class="form-inline">
+        <label>
+          Say what? <input type="text" class="input-xxlarge" placeholder="Words of wisdom"></input>
+        </label>
+        <button type="submit" class="btn">Bla!</button>
+      </form>
+    </div>
+  {{/if}}
 </template>
